@@ -507,18 +507,3 @@ Pillow, Matplotlib.
 <https://github.com/awsaf49/artifact>.
 
 **Development:** Kaggle Notebooks (Tesla T4), VS Code.
-
-> **TODO:** if you used the genmind.ch blog post on gradient and FFT analysis as
-> a reference for the hand-crafted baseline, cite it here.
-
----
-
-## 12. Team
-
-> **TODO:** solo or team? If solo, state that. If not, list contributions.
-
----
-
-## 13. Demo
-
-> **TODO:** YouTube link, set to public, also linked from the Devpost entry.
