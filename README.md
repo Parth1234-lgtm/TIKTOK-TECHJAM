@@ -6,10 +6,6 @@ A detector that distinguishes AI-generated images from real photographs, built
 and evaluated specifically for the conditions images actually arrive in:
 compressed, resized, cropped and filtered.
 
-> **TODO:** add a hero image here. Suggested: a side-by-side of one true
-> positive and one false positive with their confidence scores, or a screenshot
-> of the demo UI.
-
 ---
 
 ## 1. Project Overview
@@ -244,9 +240,6 @@ image receives identical treatment, so the numbers are reproducible.
 
 ![Robustness curve](docs/robustness_curve.png)
 
-*AUC by degradation condition. The CNN line stays flat while the FFT line
-drops below chance at the worst chain.*
-
 ### What the table shows
 
 **The learned detector degrades gracefully.** AUC falls from 0.880 clean to
@@ -317,13 +310,6 @@ above is the most informative result the project produced.
 
 Measured on the clean test split at the shipped threshold of 0.35.
 
-> **TODO:** fill in from the notebook:
-> ```
-> overall accuracy:     ____
-> false positive rate:  ____   (real images called AI)
-> false negative rate:  ____   (AI images called real)
-> ```
-
 ### 7.1 The failures are confident, not borderline
 
 ![False positives](docs/false_positives.png)
@@ -342,10 +328,6 @@ score distribution rather than near the cut. **The confidence values rank images
 usefully but should not be read as calibrated probabilities.**
 
 ### 7.2 Difficulty tracks generator quality, not generator family
-
-> **TODO:** paste `per_source_errors.csv` here, or the top and bottom 8 rows.
-
-<!-- PER-SOURCE ERROR TABLE GOES HERE -->
 
 Error rates within the GAN family span more than a hundredfold:
 
@@ -450,8 +432,6 @@ model's difficulty with individual high-quality generators.
 ---
 
 ## 9. Reproducing the Results
-
-> **TODO:** adjust paths and notebook names to match what you actually commit.
 
 1. **Data.** Attach the ArtiFact dataset on Kaggle. Build the manifest by
    reading `metadata.csv` from each of the 33 generator folders.
