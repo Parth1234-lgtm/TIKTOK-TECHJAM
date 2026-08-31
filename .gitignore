@@ -1,0 +1,37 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Deep Learning Artifacts & Datasets
+*.pt
+*.pth
+*.joblib
+*.onnx
+*.safetensors
+*.bin
+data/
+datasets/
+runs/
+wandb/
+.ckpt
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Environment Variables & Secrets
+.env
+*.pem
+
+# IDE & OS Specific
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
