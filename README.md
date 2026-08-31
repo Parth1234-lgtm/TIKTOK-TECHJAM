@@ -326,16 +326,7 @@ Measured on the clean test split at the shipped threshold of 0.35.
 
 ### 7.1 The failures are confident, not borderline
 
-> **TODO:** embed `false_positives.png` here.
-> Caption: *Real photographs the model was most confident were AI-generated.
-> A landscape and a COCO portrait both at p=1.000.*
-
 ![False positives](docs/false_positives.png)
-
-> **TODO:** embed `false_negatives.png` here.
-> Caption: *AI-generated images the model was most confident were real.
-> Note the fourth and fifth panels: StyleGAN2 horse images with visibly
-> corrupted riders, scored at p=0.006 and p=0.007.*
 
 ![False negatives](docs/false_negatives.png)
 
