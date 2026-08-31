@@ -226,15 +226,26 @@ when neither error type is stated to be costlier.
 All conditions applied at fixed parameters to the held-out test split. Every
 image receives identical treatment, so the numbers are reproducible.
 
-> **TODO:** paste `robustness_table.csv` here as a markdown table. Generate it
-> with `robust_df.to_markdown(index=False)`.
+| condition | cnn_acc | cnn_auc | grad_auc | fft_auc | comb_auc | ens_acc | ens_auc |
+|---|---|---|---|---|---|---|---|
+| clean | 0.7979 | 0.8803 | 0.6044 | 0.7353 | 0.7543 | 0.8007 | 0.8841 |
+| jpeg_90 | 0.7974 | 0.8809 | 0.6023 | 0.7171 | 0.7451 | 0.8006 | 0.8838 |
+| jpeg_50 | 0.7823 | 0.8662 | 0.6027 | 0.6835 | 0.7142 | 0.7840 | 0.8662 |
+| jpeg_30 | 0.7493 | 0.8552 | 0.6022 | 0.6871 | 0.7329 | 0.7498 | 0.8592 |
+| blur_0.5 | 0.7553 | 0.8583 | 0.6084 | 0.6560 | 0.7001 | 0.7531 | 0.8603 |
+| blur_2.0 | 0.7272 | 0.8324 | 0.5511 | 0.5357 | 0.5704 | 0.7196 | 0.8295 |
+| noise_0.05 | 0.7854 | 0.8706 | 0.5759 | 0.6111 | 0.6385 | 0.7875 | 0.8687 |
+| jitter_20 | 0.7915 | 0.8746 | 0.5879 | 0.7249 | 0.7390 | 0.7949 | 0.8780 |
+| crop_80 | 0.7756 | 0.8730 | 0.6045 | 0.7237 | 0.7509 | 0.7743 | 0.8772 |
+| rescale_0.5 | 0.7451 | 0.8496 | 0.5873 | 0.6429 | 0.6414 | 0.7399 | 0.8488 |
+| rescale_0.25 | 0.7469 | 0.8369 | 0.5727 | 0.5653 | 0.6069 | 0.7447 | 0.8365 |
+| social_media | 0.7184 | 0.8423 | 0.5861 | 0.5894 | 0.6081 | 0.7069 | 0.8396 |
+| worst_case | 0.6573 | 0.7896 | 0.5627 | 0.4908 | 0.5671 | 0.6464 | 0.7849 |
 
-<!-- ROBUSTNESS TABLE GOES HERE -->
+![Robustness curve](docs/robustness_curve.png)
 
-> **TODO (optional):** a line chart with condition on the x-axis and AUC on the
-> y-axis, one line per branch (CNN, gradient, FFT, combined). The visual gap
-> between the CNN line and the FFT line widening toward the right is the whole
-> finding in one picture. Save as `docs/robustness_curve.png`.
+*AUC by degradation condition. The CNN line stays flat while the FFT line
+drops below chance at the worst chain.*
 
 ### What the table shows
 
